@@ -1,0 +1,608 @@
+/* 전체 컨테이너 */
+.container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #f9fafb;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  /* 공통 카드 스타일 */
+  .header-card,
+  .my-assignment-card,
+  .form-card,
+  .cars-card,
+  .admin-panel {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* 헤더 스타일 */
+  .header-card {
+    text-align: center;
+  }
+  
+  .header-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .header-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  .status-open {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .status-closed {
+    background-color: #fecaca;
+    color: #991b1b;
+  }
+  
+  .status-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .time-info,
+  .count-info {
+    color: #6b7280;
+    margin: 0.25rem 0;
+  }
+  
+  /* 내 신청 정보 스타일 */
+  .my-assignment-card {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+  }
+  
+  .my-assignment-title {
+    color: #166534;
+    margin-bottom: 1rem;
+  }
+  
+  .assignment-details {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .assignment-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .assignment-info {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .driver-info h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info-item {
+    color: #6b7280;
+    margin: 0.25rem 0;
+  }
+  
+  .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .call-btn {
+    background-color: #22c55e;
+    color: white;
+  }
+  
+  .call-btn:hover {
+    background-color: #16a34a;
+  }
+  
+  .sms-btn {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .sms-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  .cancel-btn {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .cancel-btn:hover:not(:disabled) {
+    background-color: #dc2626;
+  }
+  
+  .cancel-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .btn-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* 폼 스타일 */
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .section-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .waiting-notice {
+    padding: 1rem;
+    background-color: #fefce8;
+    border: 1px solid #fde047;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .waiting-text {
+    color: #a16207;
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* 차량 목록 스타일 */
+  .cars-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .car-card {
+    border: 2px solid;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .car-available {
+    border-color: #d1d5db;
+    background-color: white;
+  }
+  
+  .car-available:hover {
+    border-color: #93c5fd;
+  }
+  
+  .car-full {
+    border-color: #fca5a5;
+    background-color: #fef2f2;
+  }
+  
+  .car-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .car-content {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  .car-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+  
+  .driver-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .car-detail {
+    color: #6b7280;
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+  }
+  
+  .capacity-badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .capacity-available {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .capacity-full {
+    background-color: #fecaca;
+    color: #991b1b;
+  }
+  
+  .passengers {
+    margin-bottom: 0.75rem;
+  }
+  
+  .passengers-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
+  }
+  
+  .passengers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+  
+  .passenger-tag {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  .driver-tag {
+    background-color: #fef3c7;
+    color: #92400e;
+    font-weight: 600;
+  }
+  
+  .apply-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .apply-btn {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .apply-active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .apply-active:hover:not(:disabled) {
+    background-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .apply-disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+  }
+  
+  .apply-status {
+    width: 100%;
+    text-align: center;
+    color: #6b7280;
+    font-weight: 500;
+  }
+  
+  /* 관리자 섹션 스타일 */
+  .admin-section {
+    margin-top: 2rem;
+  }
+  
+  .admin-login {
+    text-align: center;
+  }
+  
+  .admin-input {
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .admin-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .admin-btn {
+    background-color: #6b7280;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .admin-btn:hover {
+    background-color: #4b5563;
+  }
+  
+  .admin-controls {
+    margin-bottom: 1rem;
+  }
+  
+  .admin-status {
+    margin-top: 1.5rem;
+  }
+  
+  .status-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+  
+  .status-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .status-card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #374151;
+  }
+  
+  .status-passengers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .no-passengers {
+    color: #9ca3af;
+    font-style: italic;
+    margin: 0;
+  }
+  
+  .passenger-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafb;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .passenger-details {
+    flex-grow: 1;
+  }
+  
+  .timestamp {
+    color: #6b7280;
+    font-size: 0.75rem;
+  }
+  
+  .remove-btn {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .remove-btn:hover {
+    background-color: #dc2626;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0.5rem;
+    }
+    
+    .header-card,
+    .my-assignment-card,
+    .form-card,
+    .cars-card,
+    .admin-panel {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .header-title {
+      font-size: 1.5rem;
+    }
+    
+    .car-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .capacity-badge {
+      align-self: flex-start;
+    }
+    
+    .contact-buttons {
+      margin-top: 1rem;
+    }
+    
+    .admin-input {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+    
+    .passenger-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    
+    .remove-btn {
+      align-self: flex-end;
+    }
+  }
+  
+  /* 로딩 상태 */
+  .apply-btn:disabled,
+  .contact-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* 애니메이션 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .car-card,
+  .my-assignment-card,
+  .form-card {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* 포커스 접근성 */
+  .apply-btn:focus,
+  .contact-btn:focus,
+  .admin-btn:focus,
+  .remove-btn:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* 스크롤바 스타일 (webkit 브라우저) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+  
+  /* 다크모드 지원 준비 */
+  @media (prefers-color-scheme: dark) {
+    /* 필요시 다크모드 스타일 추가 */
+  }
